@@ -1,0 +1,64 @@
+.fpt-logo {
+    display: flex;
+}
+
+.logo-assm {
+    margin-left: 0
+}
+
+.user-name {
+    margin-right: 10px
+}
+
+.sider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    
+}
+
+.sider .ant-btn.ant-btn-lg {
+    width: 150px;
+}
+
+.logout {
+    position: fixed;
+    bottom: 10px;
+    border-top: 1px solid #8A8585;
+    padding: 20px
+}
+
+.attendence-tables {
+    display: flex;
+    justify-content: space-between;
+}
+
+.attendence-tables .attendence-table {
+    width: 72%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.attendence-tables .attendence-table input {
+    width: 25%;
+    margin-bottom: 1vh;
+    align-self: flex-end;
+}
+
+.attendence-tables .result-table {
+    width: 25%;
+}
+
+.attendence-tables .result-table .ant-btn {
+    margin-bottom: 1vh;
+}
+
+.submit-attendence {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
