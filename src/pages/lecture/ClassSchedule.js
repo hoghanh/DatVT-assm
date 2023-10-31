@@ -5,11 +5,11 @@ const plainOptions = ['Hiện diện', 'Vắng'];
 
 const result = [{ title: 'Kết quả', dataIndex: 'content' }];
 
-const Schedule = () => {
+const ClassSchedule = () => {
   const onChangePresent = (key, value) => {
     const updatedData = data.map((item) => {
       if (item.key === key) {
-        return { ...item, attendence: value };
+        return { ...item, attendance: value };
       }
       return item;
     });
@@ -29,12 +29,12 @@ const Schedule = () => {
     },
     {
       title: 'Điểm danh',
-      dataIndex: 'attendence',
+      dataIndex: 'attendance',
       render: (text, record) => (
         <Radio.Group
           options={plainOptions}
           onChange={(e) => onChangePresent(record.key, e.target.value)}
-          value={record.attendence}
+          value={record.attendance}
         />
       ),
     },
@@ -42,54 +42,54 @@ const Schedule = () => {
   const [data, setData] = useState([
     {
       key: 'SE12341',
-      name: 'Nguyen Van A',
-      attendence: 'Vắng',
+      name: 'Nguyễn Văn A',
+      attendance: 'Vắng',
     },
     {
       key: 'SE12342',
-      name: 'Nguyen Van B',
-      attendence: 'Vắng',
+      name: 'Nguyễn Văn B',
+      attendance: 'Vắng',
     },
     {
       key: 'SE12343',
-      name: 'Nguyen Van C',
-      attendence: 'Vắng',
+      name: 'Nguyễn Văn C',
+      attendance: 'Vắng',
     },
     {
       key: 'SE12344',
-      name: 'Nguyen Van D',
-      attendence: 'Vắng',
+      name: 'Nguyễn Văn D',
+      attendance: 'Vắng',
     },
     {
       key: 'SE12345',
-      name: 'Nguyen Van E',
-      attendence: 'Vắng',
+      name: 'Nguyễn Văn E',
+      attendance: 'Vắng',
     },
     {
       key: 'SE12346',
-      name: 'Nguyen Van F',
-      attendence: 'Vắng',
+      name: 'Nguyễn Văn F',
+      attendance: 'Vắng',
     },
     {
       key: 'SE12347',
-      name: 'Nguyen Van G',
-      attendence: 'Vắng',
+      name: 'Nguyễn Văn G',
+      attendance: 'Vắng',
     },
     {
       key: 'SE12348',
-      name: 'Nguyen Van H',
-      attendence: 'Vắng',
+      name: 'Nguyễn Văn H',
+      attendance: 'Vắng',
     },
-    // {
-    //   key: 'SE12349',
-    //   name: 'Nguyen Van I',
-    //   attendence: 'Vắng',
-    // },
-    // {
-    //   key: 'SE12350',
-    //   name: 'Nguyen Van K',
-    //   attendence: 'Vắng',
-    // },
+    {
+      key: 'SE12349',
+      name: 'Nguyễn Văn I',
+      attendance: 'Vắng',
+    },
+    {
+      key: 'SE12350',
+      name: 'Nguyễn Văn K',
+      attendance: 'Vắng',
+    },
   ]);
 
   const dataResult = [
@@ -101,8 +101,8 @@ const Schedule = () => {
     <>
       <Typography.Title level={4}>Lớp OD6101</Typography.Title>
       <Typography.Title level={4}>Slot 4</Typography.Title>
-      <div className='attendence-tables'>
-        <div className='attendence-table'>
+      <div className='attendance-tables'>
+        <div className='attendance-table'>
           <Input placeholder='Tìm kiếm theo tên' />
           <Table
             columns={columns}
@@ -122,11 +122,11 @@ const Schedule = () => {
           />
         </div>
       </div>
-      <div className='submit-attendence'>
+      <div className='submit-attendance'>
         <Button>Gửi</Button>
       </div>
     </>
   );
 };
 
-export default Schedule;
+export default ClassSchedule;
